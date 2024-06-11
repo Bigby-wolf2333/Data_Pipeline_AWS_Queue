@@ -70,7 +70,7 @@ def load_to_postgres(data: pd.DataFrame):
 The application is designed to run on any local machine via docker image. Refer to the "Steps to Run" section for instructions on running the application locally.
 
 ### How would you deploy this application in production?
-Deployment strategies depend on the desired processing approach. For continuous processing, the application can be packaged into a Docker image and deployed on a Kubernetes cluster. For batch processing, a scheduling tool like Apache Airflow can trigger the application at set intervals, also deployed on a Kubernetes cluster.
+Deployment strategies depend on the desired processing approach. For continuous processing, the Docker image can be deployed on a Kubernetes cluster. For batch processing, a scheduling tool like Apache Airflow can trigger the application at set intervals, also deployed on a Kubernetes cluster.
 
 ### What other components would you want to add to make this production-ready?
 Additional components for production readiness include:
