@@ -87,6 +87,8 @@ While hashing PII data makes it non-recoverable, maintaining a mapping of origin
 1. The application is designed as a batch processing system.
 2. All data provided is expected to be valid JSON format, despite potential data quality issues.
 3. The data size is assumed to be reasonable and manageable on a local machine.
+4. It is okay to replace duplicate data on the Postgres table
+5. Assume the project set up is done
 
 ## Steps to Run
 1. Clone this repository and navigate to the project folder.
@@ -97,5 +99,3 @@ To further enhance the application:
 1. Allow the application to be deployed as individual consumers of the SQS queue for scalability.
 2. Implement auditing and monitoring components for improved data integrity and system performance.
 3. Set up CI/CD pipelines for automated testing, building Docker images, and deploying to production environments.
-4. It is okay to replace duplicate data on the Postgres table
-5. Assume the project set up is done
