@@ -31,3 +31,13 @@ services:
         condition: service_healthy
       localstack:
         condition: service_healthy
+    environment:
+      AWS_ACCESS_KEY_ID: fakeAccessKeyId
+      AWS_SECRET_ACCESS_KEY: fakeSecretAccessKey
+      AWS_DEFAULT_REGION: us-east-1
+    command: >
+      bash -c "
+      until curl -f http://localstack:4566/_localstack/health; do echo 'Waiting for localstack...' && sleep 5; done;
+      until aws --region us-east-1 --endpoint-url=http://localstack:4566 sqs list-queues | grep -q login-queue; do echo 'Waiting for SQS queue...' && sleep 5; done;
+      python main.py
+      "
