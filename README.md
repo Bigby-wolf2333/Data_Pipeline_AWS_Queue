@@ -64,7 +64,7 @@ def mask_string(msg):
     return hash_hex
 ```
 
-### Connected and wrote to PostgreSQL?
+### Connected and wrote to PostgreSQL
 The strategy involves initially processing data using a table-like data structure, such as a Pandas DataFrame, and then loading it into PostgreSQL. This is achieved using SQLAlchemy library for database connectivity and operations.
 ```python 
 def load_to_postgres(data: pd.DataFrame):
