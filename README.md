@@ -1,3 +1,5 @@
+<img width="591" alt="image" src="Diagram.png">
+
 # Implementation Thoughts
 
 ## Assumptions
